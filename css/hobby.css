@@ -726,3 +726,7 @@ html:not(.kit-has-cart) .kit-demo-pill { bottom: calc(86px + env(safe-area-inset
   .panel-top:hover { background: var(--rosa); }
 }
 .tiles-papel { filter: grayscale(1) sepia(.22) brightness(1.05) contrast(.9); }
+/* bolsa: el recorte de papel va en un fondo aparte, así el globito con la cantidad no se corta */
+.kit-fab { clip-path: none !important; background: transparent !important; box-shadow: none !important; isolation: isolate; }
+.kit-fab::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--rosa); clip-path: polygon(0 4%, 98% 0, 100% 96%, 2% 100%); filter: drop-shadow(0 4px 10px rgba(43,33,36,.25)); }
+.kit-fab__n { z-index: 1; }
