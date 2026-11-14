@@ -322,7 +322,7 @@ function cargarMapa() {
   s.onload = () => {
     const Lf = window.L;
     mapa = Lf.map('mapa', { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
-    Lf.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap &copy; CARTO' }).addTo(mapa);
+    Lf.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, className: 'tiles-papel', attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(mapa);
     Object.entries(LOCALES).forEach(([id, L]) => {
       const icon = Lf.divIcon({ className: 'pin', html: `<svg viewBox="0 0 314 201"><path d="${TAZA.cuerpo}" fill="#E271AF" stroke="#443538" stroke-width="10"/><path d="${TAZA.asa}" fill="#E271AF" stroke="#443538" stroke-width="10"/></svg><span>${L.nombre}</span>`, iconSize: [54, 64], iconAnchor: [27, 34] });
       pines[id] = Lf.marker([L.lat, L.lng], { icon, title: `Hobby ${L.nombre}` }).addTo(mapa).on('click', () => ponerLocal(id));

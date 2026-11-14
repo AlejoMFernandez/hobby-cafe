@@ -725,3 +725,4 @@ html:not(.kit-has-cart) .kit-demo-pill { bottom: calc(86px + env(safe-area-inset
   .pasado .panel-top { opacity: 1; pointer-events: auto; transform: none; }
   .panel-top:hover { background: var(--rosa); }
 }
+.tiles-papel { filter: grayscale(1) sepia(.22) brightness(1.05) contrast(.9); }
