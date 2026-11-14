@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hobby · Café de especialidad en Palermo y Chacarita</title>
+<meta name="description" content="Hobby, café de especialidad, amigos y cosas ricas :) La carta de Malabia (Palermo) y Guevara (Chacarita), pedidos para llevar, eventos y market.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hobby · Café de especialidad">
+<meta property="og:url" content="https://hobby-cafe.vercel.app/">
+<meta property="og:title" content="Hobby · Café de especialidad en Palermo y Chacarita">
+<meta property="og:description" content="La carta de Malabia y Guevara, la ronda para tus amigos, eventos y market.">
+<meta property="og:image" content="https://hobby-cafe.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Tres tazas de papel apiladas y el logo de Hobby: café &amp; amigos">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hobby-cafe.vercel.app/img/og.jpg?v=1">
+<meta name="theme-color" content="#F2EDEB">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<script>
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('con-intro');
+</script>
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/foto/salon-480.webp" imagesrcset="img/foto/salon-480.webp 480w, img/foto/salon.webp 900w" imagesizes="(min-width: 768px) 30vw, 34vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/foto/matcha-480.webp" imagesrcset="img/foto/matcha-480.webp 480w, img/foto/matcha.webp 900w" imagesizes="(min-width: 768px) 30vw, 34vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/foto/avocado-480.webp" imagesrcset="img/foto/avocado-480.webp 480w, img/foto/avocado.webp 900w" imagesizes="(min-width: 768px) 30vw, 34vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/foto/cookie-480.webp" imagesrcset="img/foto/cookie-480.webp 480w, img/foto/cookie.webp 900w" imagesizes="(min-width: 768px) 30vw, 34vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/foto/iced-480.webp" imagesrcset="img/foto/iced-480.webp 480w, img/foto/iced.webp 900w" imagesizes="(min-width: 768px) 30vw, 34vw" fetchpriority="high">
+<link rel="stylesheet" href="css/fonts.css?v=1">
+<link rel="stylesheet" href="kit/kit.css?v=22">
+<link rel="stylesheet" href="css/hobby.css?v=4">
+</head>
+<body>
+
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs id="defs"></defs></svg>
+
+<a class="logo-mini" href="#inicio" aria-label="Hobby, volver al inicio"><img src="img/logo-choco.svg" alt="" width="132" height="45"></a>
+
+<div class="local" role="group" aria-label="Elegí el local">
+  <button type="button" class="local__op" data-local="malabia" aria-pressed="true"><b>Malabia</b><span>Palermo</span></button>
+  <button type="button" class="local__op" data-local="guevara" aria-pressed="false"><b>Guevara</b><span>Chacarita</span></button>
+</div>
+
+<nav class="indice" aria-label="Secciones">
+  <a href="#inicio" class="indice__solo-desk"><i>01</i><span>Inicio</span></a>
+  <a href="#ronda"><i>02</i><span>La ronda</span></a>
+  <a href="#carta"><i>03</i><span>Carta</span></a>
+  <a href="#malabia" class="indice__solo-desk"><i>04</i><span>El local</span></a>
+  <a href="#eventos"><i>05</i><span>Eventos</span></a>
+  <a href="#market"><i>06</i><span>Market</span></a>
+  <a href="#locales"><i>07</i><span>Locales</span></a>
+</nav>
+
+<main id="inicio">
+
+  <!-- HERO · letras-ventana -->
+  <section class="heroA" aria-labelledby="heroA-t">
+    <p class="heroA__sobre">Specialty coffee · Palermo &amp; Chacarita</p>
+    <h1 id="heroA-t" class="sr">Hobby, café de especialidad</h1>
+    <div class="letras" id="letras"></div>
+    <div class="heroA__pie">
+      <p class="heroA__lema">café de especialidad, amigos y cosas ricas <span class="sonrisa">:)</span></p>
+      <div class="heroA__acc">
+        <a class="recorte" href="#carta">Ver la carta</a>
+        <a class="tira" href="#ronda">Armá la ronda</a>
+      </div>
+      <p class="estado" data-estado></p>
+    </div>
+  </section>
+
+  <!-- WOW · la ronda -->
+  <section class="ronda-sec" id="ronda" aria-labelledby="ronda-t">
+    <header class="ronda__cab rv">
+      <p class="sobre">café &amp; amigos</p>
+      <h2 id="ronda-t" class="ronda__t">armá la ronda</h2>
+      <p class="ronda__bajada">Una taza por amigo, hasta seis. Tocá una bebida o arrastrala a la pila.</p>
+    </header>
+    <div class="ronda rv" id="ronda-app">
+      <div class="fichas fichas--izq" role="list" aria-label="Bebidas"></div>
+      <div class="escena" id="escena">
+        <div class="escena__pila" id="pila" aria-live="polite"></div>
+        <div class="fantasma" id="fantasma" aria-hidden="true">
+          <svg viewBox="0 0 314 201"><use href="#taza-cuerpo"/><use href="#taza-asa"/></svg>
+          <span>¿qué toma cada uno?</span>
+        </div>
+        <div class="ficha-info" id="info" role="dialog" aria-modal="false" aria-labelledby="info-n" hidden>
+          <button type="button" class="ficha-info__x" aria-label="Cerrar">×</button>
+          <div class="ficha-info__foto"></div>
+          <div class="ficha-info__txt">
+            <p class="ficha-info__cat"></p>
+            <p class="ficha-info__n" id="info-n"></p>
+            <p class="ficha-info__d"></p>
+          </div>
+          <div class="ficha-info__pie"><b class="ficha-info__p"></b><button type="button" class="ficha-info__sacar">Sacar de la ronda</button></div>
+        </div>
+      </div>
+      <div class="fichas fichas--der" role="list" aria-label="Más bebidas"></div>
+    </div>
+    <footer class="ronda__pie rv">
+      <p class="ronda__cuenta"><b id="r-cant">0 de 6</b> <span id="r-total">Total $0</span> <span id="r-local">retirás en Malabia</span></p>
+      <button type="button" class="recorte" id="r-pedir" disabled>Pedir la ronda</button>
+    </footer>
+  </section>
+
+  <!-- CARTA: lo que más sale (vidriera) + la carta completa en /carta -->
+  <section class="carta-sec" id="carta" aria-labelledby="carta-t">
+    <header class="sec-cab rv">
+      <p class="sobre">lo que más sale</p>
+      <h2 id="carta-t" class="sec-t">la carta</h2>
+      <p class="sec-bajada">Tostadas en pan de masa madre, sándwiches y ensaladas, con los precios de <b data-local-nombre>Malabia</b>. Lo sumás y lo retirás en el local.</p>
+    </header>
+    <div class="vidriera" id="vidriera" aria-live="polite"></div>
+    <div class="carta-sec__pie rv">
+      <a class="recorte" href="carta/">Ver la carta completa</a>
+      <p>Café, filtrados, matcha, pastelería y todo lo demás: más de 90 cosas ricas, con los precios de cada local.</p>
+    </div>
+  </section>
+
+  <!-- EL LOCAL DE MALABIA -->
+  <section class="local-sec" id="malabia" aria-labelledby="malabia-t">
+    <div class="local-sec__txt rv">
+      <p class="sobre">Malabia 1343 · Palermo</p>
+      <h2 id="malabia-t" class="sec-t">la casa de Palermo</h2>
+      <p>Madera, hormigón y plantas, una barra abierta y un patio para los días de sol. El local lo diseñó cupla arquitectura, con el logo recortado en una chapa de bronce que hace de lámpara.</p>
+      <p class="local-sec__nota">Guevara 91, en Chacarita, fue el primero: el de siempre, cerca de Lacroze.</p>
+    </div>
+    <div class="granos rv" id="granos">
+      <figure class="grano g1"><img src="img/foto/salon-480.webp" srcset="img/foto/salon-480.webp 480w, img/foto/salon.webp 900w" sizes="(min-width: 1024px) 26vw, 70vw" alt="El salón de Malabia con mesas largas de madera" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="grano g2"><img src="img/foto/patio-480.webp" srcset="img/foto/patio-480.webp 480w, img/foto/patio.webp 900w" sizes="(min-width: 1024px) 22vw, 70vw" alt="El patio de Malabia" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="grano g3"><img src="img/foto/barra-480.webp" srcset="img/foto/barra-480.webp 480w, img/foto/barra.webp 900w" sizes="(min-width: 1024px) 20vw, 70vw" alt="La barra con las canillas de espresso" width="900" height="1125" loading="lazy" decoding="async"></figure>
+      <figure class="grano g4"><img src="img/foto/vidriera-480.webp" srcset="img/foto/vidriera-480.webp 480w, img/foto/vidriera.webp 900w" sizes="(min-width: 1024px) 18vw, 70vw" alt="La vidriera con el logo y café &amp; amigos" width="900" height="1125" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="eventos" id="eventos" aria-labelledby="eventos-t">
+    <figure class="eventos__foto rv"><img src="img/foto/dj-480.webp" srcset="img/foto/dj-480.webp 480w, img/foto/dj.webp 900w" sizes="(min-width: 1024px) 40vw, 90vw" alt="DJ pasando música en la apertura" width="900" height="1125" loading="lazy" decoding="async"></figure>
+    <div class="eventos__txt">
+      <header class="rv">
+        <p class="sobre sobre--claro">música, café y amigos</p>
+        <h2 id="eventos-t" class="sec-t">eventos</h2>
+        <p>Festejos en el local o la barra de Hobby en tu evento. Contanos qué tenés en mente y te respondemos por WhatsApp.</p>
+      </header>
+      <div class="eventos__papeles">
+        <button type="button" class="papel rv" data-evento="en-hobby">
+          <span class="papel__n">01</span><b>Tu evento en Hobby</b><span>En Malabia o en Guevara.</span><span class="papel__cta">Consultar →</span>
+        </button>
+        <button type="button" class="papel papel--rosa rv" data-evento="en-tu-evento">
+          <span class="papel__n">02</span><b>Hobby en tu evento</b><span>Llevamos el café a donde estés.</span><span class="papel__cta">Consultar →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET -->
+  <section class="market" id="market" aria-labelledby="market-t">
+    <header class="sec-cab rv">
+      <p class="sobre">para llevarte a casa</p>
+      <h2 id="market-t" class="sec-t">market</h2>
+      <p class="sec-bajada">El café, el merch y la cerámica de la casa. Lo pedís acá y lo retirás en el local.</p>
+    </header>
+    <div class="estante">
+      <div class="estante__nivel rv">
+        <figure class="estante__foto"><img src="img/foto/hoodie2-480.webp" alt="Hoodie blanco de Hobby" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <div class="estante__cont"><h3 class="estante__t">merch</h3><div class="estante__items" data-kit="carta" data-kit-categorias="t-merch"></div></div>
+      </div>
+      <div class="estante__nivel rv">
+        <figure class="estante__foto"><img src="img/foto/tazas-480.webp" alt="Taza de cerámica texturada negra" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <div class="estante__cont"><h3 class="estante__t">cerámica by hobby</h3><div class="estante__items" data-kit="carta" data-kit-categorias="t-ceramica"></div></div>
+      </div>
+      <div class="estante__nivel rv">
+        <figure class="estante__foto"><img src="img/foto/bolsa-480.webp" alt="Bolsa de Hobby: specialty coffee shop, café &amp; amigos" width="900" height="1200" loading="lazy" decoding="async"></figure>
+        <div class="estante__cont"><h3 class="estante__t">café para llevar</h3><div class="estante__items" data-kit="carta" data-kit-categorias="t-cafe"></div></div>
+      </div>
+    </div>
+    <a class="panel-tira" href="admin/" target="_blank" rel="noopener"><b>¿Sos de Hobby?</b><span>Probá el panel: ahí entran los pedidos y cambiás la carta y los precios de cada local.</span><em>Entrar al panel →</em></a>
+  </section>
+
+  <!-- LOCALES -->
+  <section class="locales" id="locales" aria-labelledby="locales-t">
+    <div class="locales__mapa rv"><div id="mapa" role="img" aria-label="Mapa con los dos locales de Hobby: Malabia en Palermo y Guevara en Chacarita"></div></div>
+    <div class="locales__info">
+      <header class="rv">
+        <p class="sobre">vení cuando quieras</p>
+        <h2 id="locales-t" class="sec-t">dos hobbys</h2>
+      </header>
+      <article class="sede rv" data-sede="malabia">
+        <h3>Malabia <span>Palermo</span></h3>
+        <p class="sede__dir">Malabia 1343</p>
+        <p class="sede__hs"><b>Todos los días</b> de 7:30 a 21:30</p>
+        <p class="sede__estado" data-estado-sede="malabia"></p>
+        <div class="sede__acc"><a class="tira" href="https://maps.google.com/?q=Hobby+Cafe+Malabia+1343+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a></div>
+      </article>
+      <article class="sede rv" data-sede="guevara">
+        <h3>Guevara <span>Chacarita</span></h3>
+        <p class="sede__dir">Guevara 91</p>
+        <p class="sede__hs"><b>Todos los días</b> de 8:00 a 20:30</p>
+        <p class="sede__estado" data-estado-sede="guevara"></p>
+        <div class="sede__acc"><a class="tira" href="https://maps.google.com/?q=Hobby+Cafe+Guevara+91+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a><a class="tira" href="https://wa.me/5491124833251" target="_blank" rel="noopener">WhatsApp</a></div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <img class="pie__logo" src="img/logo-papel.svg" alt="Hobby" width="220" height="75" loading="lazy">
+  <p class="pie__lema">café de especialidad, amigos y cosas ricas :)</p>
+  <nav class="pie__links" aria-label="Enlaces">
+    <a href="https://www.instagram.com/hobbycafe.ba/" target="_blank" rel="noopener">Instagram @hobbycafe.ba</a>
+    <a href="carta/">Carta</a>
+    <a href="#eventos">Eventos</a>
+    <a href="admin/" target="_blank" rel="noopener">Panel del local</a>
+  </nav>
+  <p class="pie__dirs">Malabia 1343, Palermo · Guevara 91, Chacarita</p>
+  <p class="pie__credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
+</footer>
+
+<div class="aviso" id="aviso" role="status" hidden></div>
+
+<link rel="modulepreload" href="js/letras.js?v=2">
+<script type="module" src="js/app.js?v=4"></script>
+</body>
+</html>

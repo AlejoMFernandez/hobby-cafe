@@ -1,0 +1,1870 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "hobby-cafe",
+ "nombre": "Hobby",
+ "pais": "AR",
+ "idioma": "es",
+ "modo": "demo",
+ "demoVersion": 2,
+ "whatsapp": "5491124833251",
+ "instagram": "hobbycafe.ba",
+ "prefijoPedido": "HB",
+ "marca": {
+  "logo": "img/logo-choco.svg",
+  "logoPanel": "img/logo-papel.svg",
+  "colores": {
+   "fondo": "#F2EDEB",
+   "superficie": "#FFFFFF",
+   "texto": "#443538",
+   "primario": "#E271AF",
+   "acento": "#A82C6F",
+   "borde": "#DEDBD2"
+  },
+  "fuentes": {
+   "titulos": "'Bricolage', 'Hanken', system-ui, sans-serif",
+   "texto": "'Hanken', system-ui, sans-serif",
+   "googleFonts": ""
+  },
+  "estilo": {
+   "forma": "recta",
+   "sombra": "suave",
+   "borde": "2px",
+   "mayusculas": false
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "carrito": true,
+  "reservas": false,
+  "admin": true,
+  "tienda": true
+ },
+ "horarios": {
+  "lun": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "mar": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "mie": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "jue": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "vie": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "sab": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ],
+  "dom": [
+   [
+    "07:30",
+    "21:30"
+   ]
+  ]
+ },
+ "sucursales": [
+  {
+   "id": "malabia",
+   "nombre": "Malabia",
+   "direccion": "Malabia 1343, Palermo",
+   "whatsapp": "",
+   "horarios": {
+    "lun": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "mar": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "mie": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "jue": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "vie": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "sab": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ],
+    "dom": [
+     [
+      "07:30",
+      "21:30"
+     ]
+    ]
+   },
+   "mapa": "https://maps.google.com/?q=Hobby+Cafe+Malabia+1343"
+  },
+  {
+   "id": "guevara",
+   "nombre": "Guevara",
+   "direccion": "Guevara 91, Chacarita",
+   "whatsapp": "5491124833251",
+   "horarios": {
+    "lun": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "mar": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "mie": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "jue": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "vie": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "sab": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ],
+    "dom": [
+     [
+      "08:00",
+      "20:30"
+     ]
+    ]
+   },
+   "mapa": "https://maps.google.com/?q=Hobby+Cafe+Guevara+91"
+  }
+ ],
+ "pedidos": {
+  "salidas": [
+   "whatsapp",
+   "mercadopago"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "envio": 0,
+  "minimo": 0
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "preciosPorSucursal": true,
+  "categorias": [
+   {
+    "id": "tostadas",
+    "nombre": "Tostadas",
+    "orden": 1,
+    "bajada": "Pan de masa madre. Hay opción sin gluten: consultá."
+   },
+   {
+    "id": "sandwiches",
+    "nombre": "Sándwiches",
+    "orden": 2
+   },
+   {
+    "id": "platitos",
+    "nombre": "Platitos",
+    "orden": 3
+   },
+   {
+    "id": "ensaladas",
+    "nombre": "Ensaladas",
+    "orden": 4
+   },
+   {
+    "id": "wraps",
+    "nombre": "Wraps",
+    "orden": 5
+   },
+   {
+    "id": "pasteleria",
+    "nombre": "Pastelería",
+    "orden": 6
+   },
+   {
+    "id": "calientes",
+    "nombre": "Café caliente",
+    "orden": 7,
+    "bajada": "Espresso, filtrados y con leche. Leches vegetales: Oatly +$1.400, almendras +$1.000."
+   },
+   {
+    "id": "leche-tes",
+    "nombre": "Leche y tés",
+    "orden": 8
+   },
+   {
+    "id": "iced",
+    "nombre": "Iced",
+    "orden": 9
+   },
+   {
+    "id": "frios",
+    "nombre": "Filtrados fríos y cold brew",
+    "orden": 10
+   },
+   {
+    "id": "matcha",
+    "nombre": "Matcha",
+    "orden": 11
+   },
+   {
+    "id": "jugos",
+    "nombre": "Tés fríos, jugos y tragos",
+    "orden": 12
+   },
+   {
+    "id": "t-cafe",
+    "nombre": "Café para llevar",
+    "orden": 13,
+    "tienda": true
+   },
+   {
+    "id": "t-merch",
+    "nombre": "Merch",
+    "orden": 14,
+    "tienda": true
+   },
+   {
+    "id": "t-ceramica",
+    "nombre": "Cerámica by Hobby",
+    "orden": 15,
+    "tienda": true
+   }
+  ],
+  "productos": [
+   {
+    "id": "avocado",
+    "nombre": "Avocado toast",
+    "categoria": "tostadas",
+    "descripcion": "Pan de masa madre, hummus de arvejas, palta, semillas de calabaza, especias y flores.",
+    "precio": 15000,
+    "preciosSucursal": {
+     "guevara": 13500
+    },
+    "foto": "img/carta/avocado.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "adicionales": [
+     {
+      "id": "mollet",
+      "nombre": "Huevo mollet",
+      "precio": 2500,
+      "preciosSucursal": {
+       "guevara": 2200
+      }
+     },
+     {
+      "id": "revueltos",
+      "nombre": "Huevos revueltos",
+      "precio": 5000,
+      "preciosSucursal": {
+       "guevara": 4500
+      }
+     }
+    ],
+    "orden": 1,
+    "disponible": true
+   },
+   {
+    "id": "hongos",
+    "nombre": "Conserva de hongos",
+    "categoria": "tostadas",
+    "descripcion": "Pan de masa madre, ricota cremosa, conserva de hongos, queso sardo, pimienta negra, zest de limón, ciboulette y aceite de trufa.",
+    "precio": 16000,
+    "preciosSucursal": {
+     "guevara": 14000
+    },
+    "foto": "img/carta/hongos.webp",
+    "orden": 2,
+    "disponible": true
+   },
+   {
+    "id": "hot-honey-burrata",
+    "nombre": "Hot honey burrata",
+    "categoria": "tostadas",
+    "descripcion": "Pan de masa madre, burrata, tomates confitados, kale crocante y miel picante.",
+    "precio": 18000,
+    "preciosSucursal": {
+     "guevara": 17500
+    },
+    "foto": "img/carta/hot-honey-burrata.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 3,
+    "disponible": true
+   },
+   {
+    "id": "brie-chutney",
+    "nombre": "Brie y chutney",
+    "categoria": "tostadas",
+    "descripcion": "Pan de masa madre, queso brie, chutney de peras, queso sardo y nueces.",
+    "precio": 15000,
+    "preciosSucursal": {
+     "guevara": 14000
+    },
+    "orden": 4,
+    "disponible": true
+   },
+   {
+    "id": "tostadas",
+    "nombre": "Tostadas",
+    "categoria": "tostadas",
+    "descripcion": "Tostadas de pan de masa madre, manteca, queso y mermelada casera.",
+    "precio": 12000,
+    "preciosSucursal": {
+     "guevara": 11000
+    },
+    "orden": 5,
+    "disponible": true
+   },
+   {
+    "id": "focaccia",
+    "nombre": "Focaccia de pollo y pesto",
+    "categoria": "sandwiches",
+    "descripcion": "Pollo, pesto de albahaca, tomates confitados, fior di latte y mix de verdes.",
+    "precio": 20500,
+    "preciosSucursal": {
+     "guevara": 18500
+    },
+    "foto": "img/carta/focaccia.webp",
+    "orden": 6,
+    "disponible": true
+   },
+   {
+    "id": "prosciutto",
+    "nombre": "Prosciutto di Parma",
+    "categoria": "sandwiches",
+    "descripcion": "Pan de masa madre, jamón crudo, queso brie, chutney de peras y hojas de estación.",
+    "precio": 19000,
+    "preciosSucursal": {
+     "guevara": 17500
+    },
+    "foto": "img/carta/prosciutto.webp",
+    "orden": 7,
+    "disponible": true
+   },
+   {
+    "id": "ribeye",
+    "nombre": "Ribeye gouda melt",
+    "categoria": "sandwiches",
+    "descripcion": "Sándwich en pan brioche, ojo de bife braseado, queso gouda, pickles y alioli.",
+    "precio": 27500,
+    "preciosSucursal": {
+     "guevara": 24500
+    },
+    "foto": "img/carta/ribeye.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 8,
+    "disponible": true
+   },
+   {
+    "id": "cheese-melt",
+    "nombre": "Cheese melt",
+    "categoria": "sandwiches",
+    "descripcion": "Sándwich en pan brioche, queso azul, queso gouda, queso sardo, mozzarella y cebollas caramelizadas.",
+    "precio": 18500,
+    "preciosSucursal": {
+     "guevara": 16500
+    },
+    "orden": 9,
+    "disponible": true
+   },
+   {
+    "id": "rel-brie",
+    "nombre": "Relleno brie y chutney de peras",
+    "categoria": "sandwiches",
+    "descripcion": "En croissant, medialuna o pan brioche.",
+    "precio": 15000,
+    "preciosSucursal": {
+     "guevara": 14000
+    },
+    "opciones": [
+     {
+      "id": "base",
+      "nombre": "En",
+      "valores": [
+       {
+        "id": "croissant",
+        "nombre": "Croissant"
+       },
+       {
+        "id": "medialuna",
+        "nombre": "Medialuna"
+       },
+       {
+        "id": "brioche",
+        "nombre": "Pan brioche"
+       }
+      ]
+     }
+    ],
+    "orden": 10,
+    "disponible": true
+   },
+   {
+    "id": "rel-lomito",
+    "nombre": "Relleno lomito y queso",
+    "categoria": "sandwiches",
+    "descripcion": "En croissant, medialuna o pan brioche.",
+    "precio": 15000,
+    "preciosSucursal": {
+     "guevara": 14000
+    },
+    "opciones": [
+     {
+      "id": "base",
+      "nombre": "En",
+      "valores": [
+       {
+        "id": "croissant",
+        "nombre": "Croissant"
+       },
+       {
+        "id": "medialuna",
+        "nombre": "Medialuna"
+       },
+       {
+        "id": "brioche",
+        "nombre": "Pan brioche"
+       }
+      ]
+     }
+    ],
+    "orden": 11,
+    "disponible": true
+   },
+   {
+    "id": "rel-crudo",
+    "nombre": "Relleno crudo y queso",
+    "categoria": "sandwiches",
+    "descripcion": "En croissant, medialuna o pan brioche.",
+    "precio": 18000,
+    "preciosSucursal": {
+     "guevara": 16000
+    },
+    "opciones": [
+     {
+      "id": "base",
+      "nombre": "En",
+      "valores": [
+       {
+        "id": "croissant",
+        "nombre": "Croissant"
+       },
+       {
+        "id": "medialuna",
+        "nombre": "Medialuna"
+       },
+       {
+        "id": "brioche",
+        "nombre": "Pan brioche"
+       }
+      ]
+     }
+    ],
+    "orden": 12,
+    "disponible": true
+   },
+   {
+    "id": "chipa-relleno",
+    "nombre": "Chipá relleno",
+    "categoria": "sandwiches",
+    "descripcion": "",
+    "precio": 13000,
+    "preciosSucursal": {
+     "guevara": 12000
+    },
+    "opciones": [
+     {
+      "id": "relleno",
+      "nombre": "Relleno",
+      "valores": [
+       {
+        "id": "brie",
+        "nombre": "Brie, tomate y pesto"
+       },
+       {
+        "id": "lomito",
+        "nombre": "Lomito y queso"
+       }
+      ]
+     }
+    ],
+    "orden": 13,
+    "disponible": true
+   },
+   {
+    "id": "burrata",
+    "nombre": "Burrata",
+    "categoria": "platitos",
+    "descripcion": "Burrata, tomates cherry y pesto de albahaca.",
+    "precio": 19500,
+    "preciosSucursal": {
+     "guevara": 18000
+    },
+    "foto": "img/carta/burrata.webp",
+    "orden": 14,
+    "disponible": true
+   },
+   {
+    "id": "revueltos",
+    "nombre": "Huevos revueltos",
+    "categoria": "platitos",
+    "descripcion": "Pan de molde tipo brioche, huevos revueltos y dip de queso crema.",
+    "precio": 12500,
+    "preciosSucursal": {
+     "guevara": 10500
+    },
+    "orden": 15,
+    "disponible": true
+   },
+   {
+    "id": "revueltos-completos",
+    "nombre": "Huevos revueltos completos",
+    "categoria": "platitos",
+    "descripcion": "Pan de molde tipo brioche, huevos revueltos, tomates confitados y palta.",
+    "precio": 17000,
+    "preciosSucursal": {
+     "guevara": 15000
+    },
+    "foto": "img/carta/revueltos.webp",
+    "orden": 16,
+    "disponible": true
+   },
+   {
+    "id": "yogurt",
+    "nombre": "Yogurt + granola",
+    "categoria": "platitos",
+    "descripcion": "Yogurt griego, granola, fruta de estación, miel, semillas y pistachos.",
+    "precio": 17500,
+    "preciosSucursal": {
+     "guevara": 16000
+    },
+    "foto": "img/carta/yogurt.webp",
+    "orden": 17,
+    "disponible": true
+   },
+   {
+    "id": "salmon",
+    "nombre": "Ensalada de salmón",
+    "categoria": "ensaladas",
+    "descripcion": "Mix de hojas verdes, salmón, palta, arvejas, cherrys, crackers de semillas, queso crema, pickles de cebolla y rabanito. Podés cambiar la proteína por falafel o pollo.",
+    "precio": 23000,
+    "preciosSucursal": {
+     "guevara": 20500
+    },
+    "foto": "img/carta/salmon.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 18,
+    "disponible": true
+   },
+   {
+    "id": "blue-pear",
+    "nombre": "Blue pear",
+    "categoria": "ensaladas",
+    "descripcion": "Peras asadas, espinaca fresca, nueces caramelizadas, queso azul y vinagreta de aceto y limón.",
+    "precio": 17000,
+    "preciosSucursal": {
+     "guevara": 14500
+    },
+    "foto": "img/carta/blue-pear.webp",
+    "orden": 19,
+    "disponible": true
+   },
+   {
+    "id": "mushroom",
+    "nombre": "Mushroom greens",
+    "categoria": "ensaladas",
+    "descripcion": "Espinaca fresca, portobellos salteados, burrata, tomates cherry y dressing.",
+    "precio": 21000,
+    "preciosSucursal": {
+     "guevara": 18500
+    },
+    "orden": 20,
+    "disponible": true
+   },
+   {
+    "id": "cesar",
+    "nombre": "César",
+    "categoria": "ensaladas",
+    "descripcion": "Mix de hojas verdes, pollo en tiras, queso sardo, croutons y aderezo césar.",
+    "precio": 18500,
+    "preciosSucursal": {
+     "guevara": 16500
+    },
+    "foto": "img/carta/cesar.webp",
+    "orden": 21,
+    "disponible": true
+   },
+   {
+    "id": "wrap-pollo",
+    "nombre": "Wrap de pollo",
+    "categoria": "wraps",
+    "descripcion": "Pollo, palta, tomate, alioli, cebolla bicolor y mix de verdes.",
+    "precio": 17500,
+    "preciosSucursal": {
+     "guevara": 16000
+    },
+    "foto": "img/carta/wrap.webp",
+    "orden": 22,
+    "disponible": true
+   },
+   {
+    "id": "wrap-salmon",
+    "nombre": "Wrap de salmón",
+    "categoria": "wraps",
+    "descripcion": "Salmón ahumado, palta, queso crema, mix de verdes, tomate y cebolla colorada.",
+    "precio": 22000,
+    "preciosSucursal": {
+     "guevara": 21000
+    },
+    "orden": 23,
+    "disponible": true
+   },
+   {
+    "id": "wrap-carne",
+    "nombre": "Wrap de carne braseada",
+    "categoria": "wraps",
+    "descripcion": "Carne braseada a fuego lento, cebollas caramelizadas, queso fundido, alioli, tomates frescos y mix de verdes.",
+    "precio": 22000,
+    "preciosSucursal": {
+     "guevara": 21000
+    },
+    "orden": 24,
+    "disponible": true
+   },
+   {
+    "id": "cookies",
+    "nombre": "Cookies",
+    "categoria": "pasteleria",
+    "descripcion": "Los sabores del día se consultan en el mostrador ($6.000 / $8.000 en Malabia; $5.500 / $7.000 en Guevara).",
+    "precio": null,
+    "foto": "img/carta/cookies.webp",
+    "orden": 25,
+    "disponible": true
+   },
+   {
+    "id": "budines",
+    "nombre": "Budines",
+    "categoria": "pasteleria",
+    "descripcion": "Se consultan en el mostrador ($6.000 / $8.000 en Malabia; $5.500 / $7.000 en Guevara).",
+    "precio": null,
+    "orden": 26,
+    "disponible": true
+   },
+   {
+    "id": "medialuna",
+    "nombre": "Medialuna",
+    "categoria": "pasteleria",
+    "descripcion": "",
+    "precio": 4500,
+    "orden": 27,
+    "disponible": true
+   },
+   {
+    "id": "croissant",
+    "nombre": "Croissant",
+    "categoria": "pasteleria",
+    "descripcion": "",
+    "precio": 5000,
+    "orden": 28,
+    "disponible": true
+   },
+   {
+    "id": "chipa",
+    "nombre": "Chipá",
+    "categoria": "pasteleria",
+    "descripcion": "",
+    "precio": 5500,
+    "preciosSucursal": {
+     "guevara": 5000
+    },
+    "orden": 29,
+    "disponible": true
+   },
+   {
+    "id": "espresso",
+    "nombre": "Espresso doble",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 5000,
+    "preciosSucursal": {
+     "guevara": 4700
+    },
+    "foto": "img/carta/espresso.webp",
+    "orden": 30,
+    "disponible": true
+   },
+   {
+    "id": "espresso-bolas",
+    "nombre": "Espresso en bolas",
+    "categoria": "calientes",
+    "descripcion": "Solo en Guevara.",
+    "precio": null,
+    "preciosSucursal": {
+     "guevara": 5000
+    },
+    "orden": 31,
+    "disponible": true
+   },
+   {
+    "id": "americano",
+    "nombre": "Americano",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 5600,
+    "preciosSucursal": {
+     "guevara": 5300
+    },
+    "orden": 32,
+    "disponible": true
+   },
+   {
+    "id": "lungo",
+    "nombre": "Lungo",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 5200,
+    "preciosSucursal": {
+     "guevara": 4900
+    },
+    "orden": 33,
+    "disponible": true
+   },
+   {
+    "id": "chemex",
+    "nombre": "Chemex",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "1",
+      "nombre": "Para 1",
+      "precio": 8700,
+      "preciosSucursal": {
+       "guevara": 8400
+      }
+     },
+     {
+      "id": "2",
+      "nombre": "Para 2",
+      "precio": 13700,
+      "preciosSucursal": {
+       "guevara": 13400
+      }
+     }
+    ],
+    "orden": 34,
+    "disponible": true
+   },
+   {
+    "id": "v60",
+    "nombre": "V60",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": null,
+    "foto": "img/carta/filtro.webp",
+    "variantes": [
+     {
+      "id": "1",
+      "nombre": "Para 1",
+      "precio": 8700,
+      "preciosSucursal": {
+       "guevara": 8400
+      }
+     },
+     {
+      "id": "2",
+      "nombre": "Para 2",
+      "precio": 13700,
+      "preciosSucursal": {
+       "guevara": 13400
+      }
+     }
+    ],
+    "orden": 35,
+    "disponible": true
+   },
+   {
+    "id": "aeropress",
+    "nombre": "Aeropress",
+    "categoria": "calientes",
+    "descripcion": "Para 1.",
+    "precio": 8700,
+    "preciosSucursal": {
+     "guevara": 8400
+    },
+    "orden": 36,
+    "disponible": true
+   },
+   {
+    "id": "origami",
+    "nombre": "Origami",
+    "categoria": "calientes",
+    "descripcion": "Para 1.",
+    "precio": 8700,
+    "preciosSucursal": {
+     "guevara": 8400
+    },
+    "orden": 37,
+    "disponible": true
+   },
+   {
+    "id": "batch",
+    "nombre": "Batch brew",
+    "categoria": "calientes",
+    "descripcion": "Con refill tomando en el local. Solo en Malabia.",
+    "precio": 6500,
+    "preciosSucursal": {
+     "guevara": null
+    },
+    "orden": 38,
+    "disponible": true
+   },
+   {
+    "id": "cortado",
+    "nombre": "Cortado",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 5800,
+    "preciosSucursal": {
+     "guevara": 5500
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 39,
+    "disponible": true,
+    "foto": "img/carta/taza-cortado.svg"
+   },
+   {
+    "id": "magic",
+    "nombre": "Magic",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 6200,
+    "preciosSucursal": {
+     "guevara": 5900
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 40,
+    "disponible": true
+   },
+   {
+    "id": "capuccino",
+    "nombre": "Capuccino",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 6300,
+    "preciosSucursal": {
+     "guevara": 6000
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 41,
+    "disponible": true
+   },
+   {
+    "id": "flat",
+    "nombre": "Flat white",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 6500,
+    "preciosSucursal": {
+     "guevara": 6200
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 42,
+    "disponible": true,
+    "foto": "img/carta/taza-flat.svg"
+   },
+   {
+    "id": "latte",
+    "nombre": "Latte",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 6300,
+    "preciosSucursal": {
+     "guevara": 6000
+    },
+    "foto": "img/carta/latte.webp",
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 43,
+    "disponible": true
+   },
+   {
+    "id": "vainilla-latte",
+    "nombre": "Vainilla latte",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 7300,
+    "preciosSucursal": {
+     "guevara": 7000
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 44,
+    "disponible": true
+   },
+   {
+    "id": "mocca",
+    "nombre": "Mocca",
+    "categoria": "calientes",
+    "descripcion": "",
+    "precio": 6800,
+    "preciosSucursal": {
+     "guevara": 6500
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 45,
+    "disponible": true
+   },
+   {
+    "id": "chocolatada",
+    "nombre": "Chocolatada",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 6200,
+    "preciosSucursal": {
+     "guevara": 5900
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 46,
+    "disponible": true
+   },
+   {
+    "id": "matcha-latte",
+    "nombre": "Matcha latte",
+    "categoria": "leche-tes",
+    "descripcion": "Matcha ceremonial.",
+    "precio": 7100,
+    "preciosSucursal": {
+     "guevara": 6600
+    },
+    "foto": "img/carta/matcha.webp",
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 47,
+    "disponible": true
+   },
+   {
+    "id": "vainilla-matcha",
+    "nombre": "Vainilla matcha latte",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 7400,
+    "preciosSucursal": {
+     "guevara": 6900
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 48,
+    "disponible": true
+   },
+   {
+    "id": "chai",
+    "nombre": "Chai latte",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 6100,
+    "preciosSucursal": {
+     "guevara": 5800
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 49,
+    "disponible": true
+   },
+   {
+    "id": "hibiscus",
+    "nombre": "Hibiscus",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 5700,
+    "preciosSucursal": {
+     "guevara": 5400
+    },
+    "orden": 50,
+    "disponible": true
+   },
+   {
+    "id": "te-negro",
+    "nombre": "Té negro",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 5700,
+    "preciosSucursal": {
+     "guevara": 5400
+    },
+    "orden": 51,
+    "disponible": true
+   },
+   {
+    "id": "oolong",
+    "nombre": "Té oolong",
+    "categoria": "leche-tes",
+    "descripcion": "",
+    "precio": 5700,
+    "preciosSucursal": {
+     "guevara": 5400
+    },
+    "orden": 52,
+    "disponible": true
+   },
+   {
+    "id": "iced-latte",
+    "nombre": "Iced latte",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 6700,
+    "preciosSucursal": {
+     "guevara": 6400
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 53,
+    "disponible": true
+   },
+   {
+    "id": "iced-flat",
+    "nombre": "Iced flat white",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 6700,
+    "preciosSucursal": {
+     "guevara": 6500
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 54,
+    "disponible": true
+   },
+   {
+    "id": "aerocano",
+    "nombre": "Iced americano / aerocano",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 6200,
+    "preciosSucursal": {
+     "guevara": 5900
+    },
+    "foto": "img/carta/aerocano.webp",
+    "orden": 55,
+    "disponible": true
+   },
+   {
+    "id": "iced-mocca",
+    "nombre": "Iced mocca",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 6900,
+    "preciosSucursal": {
+     "guevara": 6600
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 56,
+    "disponible": true
+   },
+   {
+    "id": "iced-choco",
+    "nombre": "Iced chocolatada",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 6700,
+    "preciosSucursal": {
+     "guevara": 6400
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 57,
+    "disponible": true
+   },
+   {
+    "id": "iced-vainilla",
+    "nombre": "Iced vainilla latte",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 7700,
+    "preciosSucursal": {
+     "guevara": 7200
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 58,
+    "disponible": true
+   },
+   {
+    "id": "cold-foam",
+    "nombre": "Cold foam latte",
+    "categoria": "iced",
+    "descripcion": "Shot de espresso, leche y cold foam de mascarpone.",
+    "precio": 8000,
+    "preciosSucursal": {
+     "guevara": 7500
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 59,
+    "disponible": true,
+    "foto": "img/carta/taza-cold-foam.svg"
+   },
+   {
+    "id": "tonic",
+    "nombre": "Espresso tonic",
+    "categoria": "iced",
+    "descripcion": "",
+    "precio": 8000,
+    "preciosSucursal": {
+     "guevara": 7700
+    },
+    "orden": 60,
+    "disponible": true
+   },
+   {
+    "id": "chemex-frio",
+    "nombre": "Chemex frío",
+    "categoria": "frios",
+    "descripcion": "",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "1",
+      "nombre": "Para 1",
+      "precio": 9200,
+      "preciosSucursal": {
+       "guevara": 8700
+      }
+     },
+     {
+      "id": "2",
+      "nombre": "Para 2",
+      "precio": 15200,
+      "preciosSucursal": {
+       "guevara": 14700
+      }
+     }
+    ],
+    "orden": 61,
+    "disponible": true
+   },
+   {
+    "id": "aeropress-frio",
+    "nombre": "Aeropress frío",
+    "categoria": "frios",
+    "descripcion": "Para 1.",
+    "precio": 9200,
+    "preciosSucursal": {
+     "guevara": 8700
+    },
+    "orden": 62,
+    "disponible": true
+   },
+   {
+    "id": "origami-frio",
+    "nombre": "Origami frío",
+    "categoria": "frios",
+    "descripcion": "Para 1.",
+    "precio": 9200,
+    "preciosSucursal": {
+     "guevara": 8700
+    },
+    "orden": 63,
+    "disponible": true
+   },
+   {
+    "id": "cold-brew",
+    "nombre": "Cold brew",
+    "categoria": "frios",
+    "descripcion": "",
+    "precio": 6700,
+    "preciosSucursal": {
+     "guevara": 6400
+    },
+    "orden": 64,
+    "disponible": true
+   },
+   {
+    "id": "botellita",
+    "nombre": "Botellita de cold brew",
+    "categoria": "frios",
+    "descripcion": "",
+    "precio": 7500,
+    "preciosSucursal": {
+     "guevara": 7000
+    },
+    "orden": 65,
+    "disponible": true
+   },
+   {
+    "id": "matcha-iced",
+    "nombre": "Iced matcha latte",
+    "categoria": "matcha",
+    "descripcion": "Matcha ceremonial.",
+    "precio": 7400,
+    "preciosSucursal": {
+     "guevara": 6900
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 66,
+    "disponible": true
+   },
+   {
+    "id": "mango-matcha",
+    "nombre": "Mango matcha latte",
+    "categoria": "matcha",
+    "descripcion": "",
+    "precio": 7700,
+    "preciosSucursal": {
+     "guevara": 7200
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 67,
+    "disponible": true
+   },
+   {
+    "id": "vainilla-matcha-iced",
+    "nombre": "Iced vainilla matcha",
+    "categoria": "matcha",
+    "descripcion": "",
+    "precio": 7700,
+    "preciosSucursal": {
+     "guevara": 7200
+    },
+    "adicionales": [
+     {
+      "id": "oatly",
+      "nombre": "Leche Oatly",
+      "precio": 1400
+     },
+     {
+      "id": "almendras",
+      "nombre": "Leche de almendras",
+      "precio": 1000
+     }
+    ],
+    "orden": 68,
+    "disponible": true
+   },
+   {
+    "id": "rasp-matcha",
+    "nombre": "Raspberry matcha foam",
+    "categoria": "matcha",
+    "descripcion": "",
+    "precio": 8000,
+    "preciosSucursal": {
+     "guevara": 7500
+    },
+    "orden": 69,
+    "disponible": true,
+    "foto": "img/carta/taza-rasp-matcha.svg"
+   },
+   {
+    "id": "usucha",
+    "nombre": "Usucha",
+    "categoria": "matcha",
+    "descripcion": "",
+    "precio": 6500,
+    "preciosSucursal": {
+     "guevara": 6000
+    },
+    "orden": 70,
+    "disponible": true
+   },
+   {
+    "id": "hibiscus-frio",
+    "nombre": "Hibiscus frío",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 5900,
+    "preciosSucursal": {
+     "guevara": 5600
+    },
+    "orden": 71,
+    "disponible": true
+   },
+   {
+    "id": "te-negro-frio",
+    "nombre": "Té negro frío",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 5900,
+    "preciosSucursal": {
+     "guevara": 5600
+    },
+    "orden": 72,
+    "disponible": true
+   },
+   {
+    "id": "oolong-frio",
+    "nombre": "Té oolong frío",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 5900,
+    "preciosSucursal": {
+     "guevara": 5600
+    },
+    "orden": 73,
+    "disponible": true
+   },
+   {
+    "id": "naranja",
+    "nombre": "Exprimido de naranja",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 6400,
+    "preciosSucursal": {
+     "guevara": 6100
+    },
+    "orden": 74,
+    "disponible": true
+   },
+   {
+    "id": "limonada",
+    "nombre": "Limonada de frambuesa",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "vaso",
+      "nombre": "En vaso",
+      "precio": 6000,
+      "preciosSucursal": {
+       "guevara": 5700
+      }
+     },
+     {
+      "id": "jarra",
+      "nombre": "En jarra",
+      "precio": 13700,
+      "preciosSucursal": {
+       "guevara": 13400
+      }
+     }
+    ],
+    "orden": 75,
+    "disponible": true,
+    "foto": "img/carta/taza-limonada.svg"
+   },
+   {
+    "id": "jugo",
+    "nombre": "Jugo de temporada",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 6400,
+    "preciosSucursal": {
+     "guevara": 6100
+    },
+    "orden": 76,
+    "disponible": true
+   },
+   {
+    "id": "pink-gin",
+    "nombre": "Pink gin tonic",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 10500,
+    "preciosSucursal": {
+     "guevara": 9000
+    },
+    "foto": "img/carta/pink-gin.webp",
+    "orden": 77,
+    "disponible": true
+   },
+   {
+    "id": "vermu",
+    "nombre": "Vermú",
+    "categoria": "jugos",
+    "descripcion": "",
+    "precio": 9500,
+    "orden": 78,
+    "disponible": true
+   },
+   {
+    "id": "cuarto",
+    "nombre": "Cuarto de café",
+    "categoria": "t-cafe",
+    "descripcion": "Café de especialidad para llevar a casa.",
+    "precio": 26000,
+    "orden": 79,
+    "disponible": true
+   },
+   {
+    "id": "recarga",
+    "nombre": "Recarga cuarto de café",
+    "categoria": "t-cafe",
+    "descripcion": "Recarga del cuarto de café.",
+    "precio": 21500,
+    "orden": 80,
+    "disponible": true
+   },
+   {
+    "id": "hoodie",
+    "nombre": "Hoodie Hobby",
+    "categoria": "t-merch",
+    "descripcion": "",
+    "precio": 50000,
+    "foto": "img/carta/hoodie.webp",
+    "orden": 81,
+    "disponible": true
+   },
+   {
+    "id": "remera",
+    "nombre": "Remera",
+    "categoria": "t-merch",
+    "descripcion": "",
+    "precio": 30000,
+    "orden": 82,
+    "disponible": true
+   },
+   {
+    "id": "gorra",
+    "nombre": "Gorra",
+    "categoria": "t-merch",
+    "descripcion": "",
+    "precio": 26500,
+    "orden": 83,
+    "disponible": true
+   },
+   {
+    "id": "pin",
+    "nombre": "Pin",
+    "categoria": "t-merch",
+    "descripcion": "",
+    "precio": 7000,
+    "orden": 84,
+    "disponible": true
+   },
+   {
+    "id": "taza-espresso",
+    "nombre": "Taza Hobby espresso",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 18000,
+    "opciones": [
+     {
+      "id": "color",
+      "nombre": "Color",
+      "valores": [
+       {
+        "id": "blanco",
+        "nombre": "Blanco"
+       },
+       {
+        "id": "negro",
+        "nombre": "Negro"
+       }
+      ]
+     }
+    ],
+    "orden": 85,
+    "disponible": true
+   },
+   {
+    "id": "taza-flat",
+    "nombre": "Taza Hobby flat",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 22000,
+    "opciones": [
+     {
+      "id": "color",
+      "nombre": "Color",
+      "valores": [
+       {
+        "id": "blanco",
+        "nombre": "Blanco"
+       },
+       {
+        "id": "negro",
+        "nombre": "Negro"
+       }
+      ]
+     }
+    ],
+    "orden": 86,
+    "disponible": true
+   },
+   {
+    "id": "taza-latte",
+    "nombre": "Taza Hobby latte",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 27000,
+    "opciones": [
+     {
+      "id": "color",
+      "nombre": "Color",
+      "valores": [
+       {
+        "id": "blanco",
+        "nombre": "Blanco"
+       },
+       {
+        "id": "negro",
+        "nombre": "Negro"
+       }
+      ]
+     }
+    ],
+    "orden": 87,
+    "disponible": true
+   },
+   {
+    "id": "plato-25",
+    "nombre": "Plato playo 25 cm",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 45000,
+    "orden": 88,
+    "disponible": true
+   },
+   {
+    "id": "plato-18",
+    "nombre": "Plato playo 18 cm",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 37000,
+    "orden": 89,
+    "disponible": true
+   },
+   {
+    "id": "plato-12",
+    "nombre": "Plato playo 12 cm",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 30000,
+    "orden": 90,
+    "disponible": true
+   },
+   {
+    "id": "laja",
+    "nombre": "Plato laja tostón",
+    "categoria": "t-ceramica",
+    "descripcion": "El de las tostadas.",
+    "precio": 33000,
+    "orden": 91,
+    "disponible": true
+   },
+   {
+    "id": "corteza",
+    "nombre": "Fuente corteza",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 38000,
+    "orden": 92,
+    "disponible": true
+   },
+   {
+    "id": "bowl",
+    "nombre": "Bowl de yogurt",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 22000,
+    "orden": 93,
+    "disponible": true
+   },
+   {
+    "id": "dips",
+    "nombre": "Dips orgánicos",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": null,
+    "variantes": [
+     {
+      "id": "4",
+      "nombre": "9×4",
+      "precio": 15000
+     },
+     {
+      "id": "3x",
+      "nombre": "Set de 3",
+      "precio": 35000
+     }
+    ],
+    "orden": 94,
+    "disponible": true
+   },
+   {
+    "id": "tetera",
+    "nombre": "Tetera",
+    "categoria": "t-ceramica",
+    "descripcion": "",
+    "precio": 60000,
+    "orden": 95,
+    "disponible": true
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu bolsa",
+  "verPedido": "Ver tu bolsa",
+  "carritoVacio": "Tu bolsa está vacía.",
+  "carritoVacioSub": "Sumá algo de la carta o armá la ronda.",
+  "pedidoListo": "¡Listo! :)",
+  "enviarPedido": "Pedir para llevar",
+  "seguir": "Seguir mirando",
+  "sedeRetiro": "¿En qué Hobby lo retirás?"
+ }
+}
